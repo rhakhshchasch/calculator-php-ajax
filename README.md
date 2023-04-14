@@ -1,2 +1,2 @@
 # calculator-php-ajax
-Калькулятор на PHP и AJAX
+Простой калькулятор на PHP и AJAX (без ООП)
