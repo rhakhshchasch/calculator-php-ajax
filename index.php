@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/calculator-php-ajax/access/img/favicon.jpg" rel="shortcut icon" type="image/jpg">
     <link rel="stylesheet" href="access/styles/style.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="access/js/scrypt.js"></script>
