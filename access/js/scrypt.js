@@ -8,7 +8,7 @@ $(document).ready(function(){
 		// console.log(event);
 
 		$.ajax({
-			url: '/php_Aleksey/main/php/calculator_function_AJAX/controller/calculator.php',         	/* Куда пойдет запрос */
+			url: 'path',         	/* Куда пойдет запрос */
 			method: 'post',                    		/* Метод передачи (post или get) */
 			dataType: 'json',						/* Тип данных в ответе (xml, json, script, html) */
 			data: form.serialize(),  				/* Параметры передаваемые в запросе */
