@@ -1,9 +1,9 @@
 <?php
-// function d($data){  //debug function, режим дебага - все ошибки выводятся. На этой строке data - параметр функции - принимает данные
-//     echo "<pre>";
-//     var_dump($data); //На этой строке data - аргумент функции - передает аргумент (данные)
-//     echo "</pre>";
-// }
+function d($data){      // debug function, режим дебага - все ошибки выводятся. На этой строке data - параметр функции - принимает данные
+    echo "<pre>";
+    var_dump($data);    // На этой строке data - аргумент функции - передает аргумент (данные)
+    echo "</pre>";
+}
 
 // echo json_encode($_POST);
 // echo "<b>test</b>";
@@ -43,7 +43,7 @@ if(isset($_POST["submit"])){
     if($num1 == NULL || $num2 == NULL){
         $result = "Enter both values first";
     } else {
-         // проверка на число
+    // проверка на число
     if(!is_numeric($num1) || !is_numeric($num2)){
         $result = "Please enter numeric values";
     } else {
@@ -69,6 +69,28 @@ if(isset($_POST["submit"])){
                 break;
         }
     }
-    $result = json_encode(["Result" => $result]);       // json_encode() возвращает string|(false = "")
+    }
+    $result = json_encode(["Result" => $result]);           // json_encode() возвращает string|(false = "")
     if(isset($result)) echo $result;
 }
+
+exit();
+$array = [];            // подготовка структуры данных - объявление массива
+$array = ['name' => 'Aleksei', 'surname' => 'Pershikov'];
+$array['teacher'] = 'Ruslan Senatorov';
+$array += ['wannabe' => 'PHP developer', 'to_loot' => 'money'];
+$array[] = 'PHP developer';
+arrtay_push($array, 'Fullsack developer', 'Python developer');
+unset($array[0]);
+
+echo "<pre>";
+var_dump($array);
+echo "</pre>";
+
+$fruits = ['name1' => 'apple', 'name2' => 'banana', 'name3' => 'mango'];
+$new_array = [];
+
+foreach($fruits as $value){
+    $new_array[] = $value;
+}
+d($new_array);

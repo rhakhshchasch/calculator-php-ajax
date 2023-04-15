@@ -8,12 +8,12 @@ $(document).ready(function(){
 		// console.log(event);
 
 		$.ajax({
-			url: 'path',         	/* Куда пойдет запрос */
+			url: '/calculator-php-AJAX/controller/calculator.php',         	/* Куда пойдет запрос */
 			method: 'post',                    		/* Метод передачи (post или get) */
 			dataType: 'json',						/* Тип данных в ответе (xml, json, script, html) */
 			data: form.serialize(),  				/* Параметры передаваемые в запросе */
 			success: function(output){  			/* функция которая будет выполнена после успешного запроса  */
-				// console.log(output);     			/* В переменной data содержится ответ от calculator.php */
+				// console.log(output);     		/* В переменной data содержится ответ от calculator.php */
 				const result = output.Result;
 				$("#ajaxResult").html(result);
 			},
