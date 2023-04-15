@@ -43,6 +43,10 @@ if(isset($_POST["submit"])){
     if($num1 == NULL || $num2 == NULL){
         $result = "Enter both values first";
     } else {
+         // проверка на число
+    if(!is_numeric($num1) || !is_numeric($num2)){
+        $result = "Please enter numeric values";
+    } else {
         switch($operator){
             case '+':
                 $result = add($num1, $num2);                // вызов функции  и  отдача аргументов в функцию
